@@ -97,6 +97,11 @@ class SudokuTestCase(unittest.TestCase):
         actual_pos = sudoku.find_empty_positions(grid)
         self.assertEqual(expected_pos, actual_pos)
 
+        grid = [["1", "2", "3"], ["4", "5", "6"], ["0", "8", "9"]]
+        expected_pos = None
+        actual_pos = sudoku.find_empty_positions(grid)
+        self.assertEqual(expected_pos, actual_pos)
+
     def test_find_possible_values(self):
         grid = [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
